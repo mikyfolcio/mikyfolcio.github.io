@@ -4,12 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
     <link rel="stylesheet" href="../assets/scss/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="icon" type="image/png" sizes="16x16"  href="assets/img/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
 
     <title>CV</title>
 </head>
@@ -54,48 +60,77 @@
      <main>
         <section id="cv">
 
-
             <div class="cv-container">
                                 <h1>Curriculum Vitae</h1>
 
-                <div class="formazione">
+                <div id="formazione" class="blocco">
                     <h2>Formazione</h2>
 
-                        <p>2013 - 2014</p>
-                        <h3>Diploma indirizzo grafica</h3>
-                        <h4>I.T.I.S. Setificio Paolo Carcano (Como) </h4>
+                        <p class="data">2013 - 2014</p>
+                        <h3>Diploma indirizzo Graphic Design | I.T.I.S. Setificio Paolo Carcano (Como)</h3>
+                            <h4> Creazione di materiale grafico </h4>
 
-                        <p>2014 - 2024</p>
-                        <h3>Laurea Triennale in Design della Comunicazione</h3>
-                            <h4>Politecnico di Milano</h4>
+                        <p class="data">2014 - 2024</p>
+                        <h3>Laurea Triennale in Design della Comunicazione | Politecnico di Milano</h3>
+                            <h4> Creazione di materiali grafici, audiovisivi e digitali, coi principali programmi di grafica. </br>
+                                Tesi sul manuale d'uso del marchio.
+                            </h4>
 
-                        <p>In corso</p>
-                        <h3>Master professionalizzante in UX/UI design</h3>
-                        <h4>Start2Impact University</h4>
+                        <p class="data">2024 - 2026</p>
+                        <h3>Master professionalizzante in UX/UI design | Start2Impact University</h3>
+                            <h4> Progetti di UX e UI Design, grafica, copywriting, HTML e CSS, Agenti AI.</h4>
                 </div>
-                <div class="esperienze">
+
+                <div id="esperienze" class="blocco">
+
                 <h2>Esperienze lavorative</h2>
 
-                <p>2013 - 2014</p>
-                <h3>Stage graphic design </h3> <h4>presso Luca Nava Design (Erba)</h4>
+                    <p class="data">2013 - 2014</p>
+                    <h3>Stage Graphic Design presso Luca Nava Design (Erba)</h3>
+                    <h4>Creazione di materiali grafici per la comunicazione dei clienti.</h4>
 
-                <p>2014 - 2024</p>
-                <h3>Disegnatrice inkjet </h3> <h4>Puntoseta (Bulgarograsso)</h4>
+                    <p class="data">2014 - 2024</p>
+                    <h3>Disegnatrice inkjet presso Puntoseta (Bulgarograsso)</h3>
+                    <h4> Creazione e gestione di disegni per la stampa inkjet, di grafiche per gadget di mostre e musei.</h4>
 
-                <div class="lingue">
-                <h2>Lingue</h2>
-                    <p>Italiano: madrelingua</p>
-                    <p>Inglese: B2</p>
                 </div>
 
-                <div class="interessi">
-                <h2>Interessi</h2>
-                <p>Disegno, danza, hobby creativi, movimento</p>
+                <div id="lingue" class="blocco">
+                    <h2>Lingue</h2>
+                        <p>Italiano: madrelingua</p>
+                        <p>Inglese: B2</p>
                 </div>
-            
 
+                <div id="interessi" class="blocco">
+                    <h2>Interessi</h2>
+                    <p>Dagli hobby creativi passando per lo studio e l'insegnamento delle danze etniche, che mi permettono di esprimermi e creare continuamente.
+</p>
+                </div>
 
             </div>
         </section>
+
+            <!-- footer -->    
+        <footer class="footer">
+            <h3>Michela Folcio</h3>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/mikyfolciodesigner/">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="https://www.linkedin.com/in/michela-folcio-2abb16b8/">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/mikyfolcio">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://www.behance.net/MichelaF">
+                    <i class="fa-brands fa-behance"></i>
+                </a>
+                </div>
+            <p>Copyright © 2026 Michela Folcio. All rights reserved.</p>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     
     <link rel="stylesheet" href="../assets/scss/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,6 +13,10 @@
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
    
+    <link rel="icon" type="image/png" sizes="16x16"  href="assets/img/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
     <title>Contattami</title>
 </head>
 <body>    <!-- NAVBAR -->
@@ -51,24 +57,74 @@
      </nav>
     
             <!--SEZIONE1: Contacts-->
-        <section id="Contatti" class="sezione-contatti">
-            <h2>Contacts / Contatti</h2>
+        <main id="contattimain">
 
-            <div class="group">
-                <div class="text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam quibusdam nostrum laborum? Iure quisquam, sapiente rerum nobis, quod dignissimos facere culpa, quibusdam velit fugit inventore? Et vero fugiat odit vel?
+            <section id="Contatti" class="sezione-contatti">
+
+                <h2>Contacts / Contatti</h2>
+
+                <div class="group">
+                
+                        <p>Se vuoi entrare in contatto con me, puoi compilare questo form, ti risponderò il prima possibile!</p>
+                
+                    <form id="contatti" class="form-contatti">
+                        <label for="name">Nome</label>
+                        <input type="text" id="nome">
+                        <label for="email"> E-mail </label>
+                        <input type="email" id="email">
+                        <label for="message"> Messaggio </label>
+                        <textarea id="message" columns="1" rows="6"></textarea>
+                        <button type="submit"> Invia </button>
+                    </form>
                 </div>
-                <form id="contatti" class="form-contatti">
-                    <label for="name">Nome</label>
-                    <input type="text" id="nome">
-                    <label for="email"> E-mail </label>
-                    <input type="email" id="email">
-                    <label for="message"> Messaggio </label>
-                    <textarea id="message" columns="1" rows="6"></textarea>
-                    <button type="submit"> Invia </button>
-                </form>
-            </div>
-        </section>
+            </section>   
 
+            <section id="social" class="sezione-social">
+
+                <h2>Profili social</h2>
+
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/mikyfolciodesigner/">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+
+                        <a href="https://github.com/mikyfolcio">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/michela-folcio-2abb16b8/">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+
+                        <a href="https://www.behance.net/MichelaF">
+                            <i class="fa-brands fa-behance"></i>
+                        </a>
+
+                </div>
+            </section>
+    </main>
+
+            <!-- footer -->    
+        <footer class="footer">
+            <h3>Michela Folcio</h3>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/mikyfolciodesigner/">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="https://www.linkedin.com/in/michela-folcio-2abb16b8/">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/mikyfolcio">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://www.behance.net/MichelaF">
+                    <i class="fa-brands fa-behance"></i>
+                </a>
+                </div>
+            <p>Copyright © 2026 Michela Folcio. All rights reserved.</p>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
