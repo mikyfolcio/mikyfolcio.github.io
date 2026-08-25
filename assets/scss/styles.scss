@@ -70,6 +70,7 @@ nav {
 
         .left img {
         width:40px;
+        margin-right: 8px;
         }
     }
 
@@ -133,6 +134,7 @@ nav .right  {
             margin-right: 4px;
             margin-bottom: 10px;
             transition: 0,5s;
+            background-color: transparent;
         }
 
         a:hover {
@@ -314,6 +316,11 @@ nav .right  {
                 filter: brightness(.9);
                 }
             }
+    #form-message {
+    margin-top: 16px;
+    font-size: 16px;
+    text-align: center;
+}
 
     }
             

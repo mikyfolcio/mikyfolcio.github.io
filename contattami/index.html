@@ -13,17 +13,24 @@
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
    
-    <link rel="icon" type="image/png" sizes="16x16"  href="assets/img/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="16x16"  href="/assets/img/favicon-16x16.png">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#ffffff">
+
+    <meta property="og:title" content="Michela Folcio — Graphic Designer">
+    <meta property="og:description" content="Sito portfolio di Michela Folcio, graphic designer.">
+    <meta property="og:image" content="/assets/img/imgopengraph.png">
+    <meta property="og:url" content="https://www.tuosito.it/">
+    <meta property="og:type" content="website">
 
     <title>Contattami</title>
 </head>
 <body>    <!-- NAVBAR -->
      <nav>
         <div class="left">
-            <img src="../assets/img/logo.svg" alt="logo Michela Folcio"/>
-            <a href="../Index.html">Michela Folcio</a>
+            <a href="/Index.html">
+            <img src="/assets/img/logo.svg" alt="logo Michela Folcio"/>
+            Michela Folcio</a>
         </div>
 
         <div class="vocimenu">
@@ -67,16 +74,25 @@
                 
                         <p>Se vuoi entrare in contatto con me, puoi compilare questo form, ti risponderò il prima possibile!</p>
                 
-                    <form id="contatti" class="form-contatti">
-                        <label for="name">Nome</label>
-                        <input type="text" id="nome">
-                        <label for="email"> E-mail </label>
-                        <input type="email" id="email">
-                        <label for="message"> Messaggio </label>
-                        <textarea id="message" columns="1" rows="6"></textarea>
-                        <button type="submit"> Invia </button>
-                    </form>
+                        <form id="contatti" class="form-contatti">
+
+                            <label for="nome">Nome</label>
+                            <input type="text" id="nome" name="name" required>
+
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" required>
+
+                            <label for="message">Messaggio</label>
+                            <textarea id="message" name="message" rows="6" required></textarea>
+
+                            <button type="submit">Invia</button>
+
+                            
+
+                        </form> 
+
                 </div>
+
             </section>   
 
             <section id="social" class="sezione-social">
@@ -126,5 +142,9 @@
         </footer>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-</body>
+
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+        <script src="../assets/javascript/script.js"></script>
+
+    </body>
 </html>
