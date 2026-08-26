@@ -9,7 +9,6 @@ h1, h2 {
   font-weight: 700;
 }
 
-/*____HOME____*/
 html {
   scroll-behavior: smooth;
 }
@@ -37,17 +36,22 @@ nav {
   top: 0;
   background-color: #ffe9c2;
 }
+nav .nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+nav .mobile-menu-toggle {
+  display: none;
+}
 nav .vocimenu a {
   font-weight: 600;
   padding: 8px 16px;
 }
 nav .vocimenu a:hover {
   color: #DE4812;
-}
-nav .left a {
-  color: #400b44;
-  font-size: 20px;
-  font-weight: 600;
+  background-color: #ffdc9f;
+  border-radius: 24px;
 }
 nav .left {
   display: flex;
@@ -55,29 +59,44 @@ nav .left {
   align-items: center;
   gap: 16px;
 }
+nav .left .navbar-brand {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  height: 100%;
+}
+nav .left .navbar-brand p {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+nav .left a {
+  color: #400b44;
+  font-size: 20px;
+  font-weight: 600;
+}
 nav .left img {
   width: 40px;
   margin-right: 8px;
 }
 
-nav .right a {
-  color: #400b44;
+nav .bottone-contatti a {
   margin: 0 10px;
 }
-nav .right a:last-child {
+nav .bottone-contatti a:last-child {
   color: #fff0d2;
   background-color: #DE4812;
   padding: 8px 20px;
   border-radius: 999px;
 }
-nav .right a:last-child:hover {
+nav .bottone-contatti a:last-child:hover {
   color: #fff0d2;
   background-color: #400b44;
 }
-nav .right a span {
+nav .bottone-contatti a span {
   margin-left: 4px;
 }
-nav .right .mio-bottone {
+nav .bottone-contatti .mio-bottone {
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -86,20 +105,36 @@ nav .right .mio-bottone {
   padding: 10px 20px;
 }
 
-/* SEZIONE 1*/
+/*___MAIN___*/
+section {
+  padding: 48px 96px;
+}
+section #sottotitolo {
+  text-align: left;
+}
+section h2 {
+  font-size: 36px;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+/* HOME - SEZIONE 1*/
 .hero-section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 64px 96px;
   gap: 40px;
-  background-image: url("/assets/img/sfondotext-02.svg");
+  margin-top: 0px;
+  background-image: url("/assets/img/sfondotext-03.png");
   background-repeat: no-repeat;
-  background-position: right bottom;
+  background-position: right top;
   background-size: auto 120%;
 }
 .hero-section h1 {
   font-size: 48px;
+}
+.hero-section h2 {
+  align-items: center;
 }
 .hero-section .text .links {
   margin-top: 24px;
@@ -134,22 +169,34 @@ nav .right .mio-bottone {
   flex: 4;
   display: flex;
   justify-content: right;
+  align-items: center;
 }
 .hero-section .my-photo img {
   border-radius: 999px;
   width: 350px;
 }
+.hero-section .fotoaboutme {
+  flex: 0 0 33.333%;
+  max-width: 33.333%;
+  min-width: 0;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+.hero-section .fotoaboutme img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
 
-/*SEZIONE 2 skills */
+/*HOME - SEZIONE 2 skills */
 .sezione-skills {
-  padding: 48px 96px;
-  margin-bottom: 96px;
+  margin-bottom: 48px;
+  padding: 64px 96px;
   background-color: #ffe4b5;
 }
 .sezione-skills h2 {
   text-align: center;
-  font-size: 36px;
-  margin-bottom: 8px;
 }
 .sezione-skills .text {
   text-align: center;
@@ -188,31 +235,107 @@ nav .right .mio-bottone {
   line-height: 1;
 }
 
-/*footer*/
+.contatti {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 24px;
+  background-image: url("/assets/img/sfondotext-02.png");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: auto 140%;
+}
+.contatti a {
+  color: white;
+}
+
+.contatti .bottone-contatti {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 16px;
+}
+.contatti .bottone-contatti .mio-bottone {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  white-space: nowrap;
+  color: #fff0d2;
+  background-color: #DE4812;
+  padding: 10px 20px;
+  border-radius: 30px;
+}
+.contatti .bottone-contatti .mio-bottone:hover {
+  color: #fff0d2;
+  background-color: #6a1371;
+}
+
+/*___FOOTER___*/
 .footer {
-  padding: 24px 96px;
+  padding: 48px 96px;
   background-color: #400b44;
   color: #fff0d2;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 48px;
 }
-.footer .social-icons {
-  padding: 8px 0;
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border-left: 1px solid #fff0d2;
+  padding: 0 32px;
+}
+.footer-right a {
+  color: #fff0d2;
+}
+.footer-right a:hover {
+  color: #ff8133;
+}
+
+.copyright {
+  flex-basis: 100%;
+  margin: 0;
+  font-size: 12px;
+  font-weight: 100;
+  text-align: right;
+}
+
+.footer-left .bottone-contatti-footer .mio-bottone {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  color: #fff0d2;
+  background-color: #DE4812;
+  padding: 10px 20px;
+  border-radius: 30px;
+}
+.footer-left .bottone-contatti-footer .mio-bottone:hover {
+  color: #fff0d2;
+  background-color: #6a1371;
+}
+
+.social-icons {
+  margin: 32px 0;
   display: flex;
   gap: 0px;
 }
-.footer .social-icons a {
-  width: 44px;
-  height: 44px;
-  display: flex;
-  align-items: center;
-}
-.footer .social-icons i {
+.social-icons i {
+  padding-right: 24px;
   color: #fff0d2;
+  width: 100%;
+  height: 100%;
 }
-.footer .social-icons i:hover {
-  color: #DE4812;
+.social-icons i:hover {
+  color: #ff8133;
 }
 
-/*____CONTATTI____*/
+/*____ PAGINA_CONTATTI____*/
 #contattimain {
   padding: 48px 96px;
   margin-bottom: 96px;
@@ -284,9 +407,9 @@ nav .right .mio-bottone {
   color: #400b44;
 }
 
-/*____PORTFOLIO____*/
+/*____ PAGINA_PORTFOLIO____*/
 #sezione-works {
-  padding: 48px 96px;
+  padding: 48px 0;
   margin-bottom: 96px;
 }
 #sezione-works h2 {
@@ -378,7 +501,7 @@ nav .right .mio-bottone {
 }
 
 #uxuidesign {
-  padding: 0 0 48px 0;
+  padding: 48px 96px;
 }
 #uxuidesign .container {
   padding: 48px 0;
@@ -395,17 +518,7 @@ nav .right .mio-bottone {
   height: auto;
 }
 
-@media (max-width: 991px) {
-  .portfolio-item {
-    flex: 0 0 calc((100% - 40px) / 3);
-  }
-}
-@media (max-width: 767px) {
-  .portfolio-item {
-    flex: 0 0 calc((100% - 20px) / 2);
-  }
-}
-/*____CV____*/
+/*____PAGINA_CV____*/
 #cv {
   background-image: url("/assets/img/sfondotext-03.png");
   background-repeat: no-repeat;
@@ -413,11 +526,12 @@ nav .right .mio-bottone {
   background-size: auto 39%;
 }
 #cv .cv-container {
-  padding: 48px 96px;
+  padding: 48px 0;
 }
 #cv .cv-container h2 {
   color: #DE4812;
   padding: 4px 0;
+  text-align: left;
 }
 #cv .cv-container p {
   padding: 4px 0;
@@ -440,9 +554,14 @@ nav .right .mio-bottone {
   margin: 48px 0;
 }
 
+/*___PAGINA - ABOUTME___*/
+.titoletto {
+  margin-top: 48px;
+}
+
 /* MEDIA QUERIES */
 @media (max-width: 992px) {
-  /*sezione1*/
+  /*HOME - sezione1*/
   .hero-section {
     flex-direction: column-reverse;
   }
@@ -452,7 +571,14 @@ nav .right .mio-bottone {
   .my-photo img {
     width: 200px;
   }
-  /*sezione-contatti*/
+  .fotoaboutme {
+    flex: 0 0 auto;
+    max-width: 100%;
+  }
+  .fotoaboutme img {
+    width: 200px;
+  }
+  /*HOME - sezione-contatti*/
   #contattimain {
     flex-direction: column;
   }
@@ -462,34 +588,118 @@ nav .right .mio-bottone {
   .sezione-contatti .group {
     flex-direction: column;
   }
+  /*PAGINA - PORTFOLIO*/
+  .portfolio-item {
+    flex: 0 0 calc((100% - 40px) / 3);
+  }
 }
 @media (max-width: 768px) {
   /*navbar*/
   nav {
     padding: 0 20px;
+    position: sticky;
   }
-  nav .right a {
-    font-size: 22px;
+  nav .left {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
   }
-  nav .right a:last-child {
+  nav .mobile-menu-toggle {
+    display: block;
+    margin-left: auto;
+    border: 0;
+    padding: 8px;
     color: #400b44;
     background-color: transparent;
-    padding: 0;
+    font-size: 22px;
+    cursor: pointer;
   }
-  nav .right a span {
+  nav .nav-menu {
+    display: none;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    padding: 20px;
+    background-color: #ffe9c2;
+    box-shadow: 0 8px 16px rgba(64, 11, 68, 0.12);
+  }
+  nav.menu-open .nav-menu {
+    display: flex;
+  }
+  nav .vocimenu {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  nav .vocimenu a {
+    padding: 8px 0;
+  }
+  nav .left .navbar-brand p {
     display: none;
   }
-  /*hero*/
-  .hero-section {
+  nav .bottone-contatti a {
+    display: inline-flex;
+    margin: 0;
+  }
+  .footer {
+    padding: 32px;
+    flex-direction: column;
+    gap: 32px;
+  }
+  .footer .footer-left,
+  .footer .footer-right {
+    width: 100%;
+  }
+  .footer .footer-left .bottone-contatti-footer {
+    width: 100%;
+  }
+  .footer .footer-left .bottone-contatti-footer .mio-bottone {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+  .footer .footer-right {
+    border-left: 0;
+    padding: 0;
+  }
+  /*HOME - sezione1*/
+  section {
     padding: 16px 32px;
   }
-  .hero-section .text h1 {
+  #contattimain,
+  #uxuidesign {
+    padding: 16px 32px;
+  }
+  .contatti .bottone-contatti {
+    width: 100%;
+    margin: 16px 0;
+  }
+  .contatti .bottone-contatti .mio-bottone {
+    width: 100%;
+  }
+  .sezione-skills {
+    padding: 32px;
+  }
+  .sezione-skills .text {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .text {
+    text-align: left;
+    font-size: 14px;
+    width: 100%;
+    display: block;
+  }
+  h1 {
     font-size: 24px;
   }
-  /*skill section*/
-  .sezione-skills {
-    padding: 16px 32px;
-  }
+  /*HOME - sezione skills*/
   .sezione-skills h2 {
     font-size: 24px;
   }
@@ -499,11 +709,15 @@ nav .right .mio-bottone {
   .sezione-skills .caselle .skill {
     color: #DE4812;
   }
-  /*sezione contatti*/
+  /*PAGINA - CONTATTI*/
   .sezione-contatti {
     padding: 0 32px;
   }
   .sezione-contatti h2 {
     font-size: 24px;
+  }
+  /*PAGINA - PORTFOLIO*/
+  .portfolio-item {
+    flex: 0 0 calc((100% - 20px) / 2);
   }
 }/*# sourceMappingURL=styles.css.map */

@@ -32,25 +32,27 @@
     <!-- NAVBAR -->
      <nav>
         <div class="left">
-            <a href="Index.html">
+            <a class="navbar-brand" href="Index.html">
             <img src="/assets/img/logo.svg" alt="logo Michela Folcio"/>
-            Michela Folcio</a>
+            <p>Michela Folcio</p></a>
         </div>
 
-        <div class="vocimenu">
-            <a href="cv/index.html">CV</a>
-            <a href="portfolio/index.html">Portfolio</a>
-            <a href="aboutme/index.html">About me</a>
+        <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <div class="nav-menu" id="site-menu">
+            <div class="vocimenu">
+                <a href="cv/index.html">CV</a>
+                <a href="portfolio/index.html">Portfolio</a>
+                <a href="aboutme/index.html">About me</a>
+            </div>
+            <div class="bottone-contatti">
+                <a href="/contattami/index.html" class="btn mio-bottone">
+                    <span><i class="fa-solid fa-envelope"></i> Contattami</span>
+                </a>
+            </div>
         </div>
-
-        <div class="right">
-
-            <a href="/contattami/index.html" class="btn mio-bottone">
-                <span> <i class="fa-solid fa-envelope"></i> Contattami</span>
-            </a>
-
-        </div>
-
      </nav>
 
      <main>
@@ -58,10 +60,10 @@
         <section class="hero-section">
             <div class="text">
                 <h1>Ciao, sono Michela</h1>
-                <h2>Graphic designer | Print Designer | UI/UX Designer</h2>
+                <h2 id="sottotitolo">Graphic designer | Print Designer</h2>
                 <p>Credo che un buon progetto debba essere bello, ma anche funzionale e capace di comunicare nel modo giusto.
                     Ho incontrato diversi ambiti del design, dal branding alla comunicazione visiva, fino al mondo tessile.
-                    Oggi sto approfondendo la UX/UI Design per unire creatività, estetica e funzionalità. </br></br>
+                    Oggi sto approfondendo lo UX/UI Design per unire creatività, estetica e funzionalità. </br></br>
 
                     Hai un’idea da trasformare in qualcosa di concreto? <strong>Parliamone!</strong></p>
                 <div class="links">
@@ -158,30 +160,61 @@
             </div>
         </section>
 
+        <section id="contatti" class="contatti">
+            <h2> Vuoi fare due chiacchiere? </h2>
+        
+            <div class="bottone-contatti">
+                <a href="/contattami/index.html" class="btn mio-bottone">
+                <span> <i class="fa-solid fa-envelope"></i> Contattami</span>
+                </a>
+            </div>
+
 
      </main>
 
     <!-- footer -->    
         <footer class="footer">
-            <h3>Michela Folcio</h3>
-            <div class="social-icons">
-                <a href="https://www.instagram.com/mikyfolciodesigner/">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
+            <div class="footer-left">
+                <h4>Michela Folcio | Graphic Designer</h4>
+                <h5>Como - Italy</h5>
+                
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/mikyfolciodesigner/">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
 
-                <a href="https://www.linkedin.com/in/michela-folcio-2abb16b8/">
-                    <i class="fa-brands fa-linkedin"></i>
-                </a>
-                <a href="https://github.com/mikyfolcio">
-                    <i class="fa-brands fa-github"></i>
-                </a>
-                <a href="https://www.behance.net/MichelaF">
-                    <i class="fa-brands fa-behance"></i>
-                </a>
+                    <a href="https://www.linkedin.com/in/michela-folcio-2abb16b8/">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+
+                    <a href="https://github.com/mikyfolcio">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+
+                    <a href="https://www.behance.net/MichelaF">
+                        <i class="fa-brands fa-behance"></i>
+                    </a>
                 </div>
-            <p>Copyright © 2026 Michela Folcio. All rights reserved.</p>
+
+                                <div class="bottone-contatti-footer">
+                <a href="/contattami/index.html" class="btn mio-bottone">
+                <span> <i class="fa-solid fa-envelope"></i> Contattami</span>
+                </a>
+            </div>
+
+
+            </div>
+
+            <div class="footer-right">
+                <a href="/Index.html"> Home </a>
+                <a href="/cv/index.html"> Curriculum Vitae </a>
+                <a href="/portfolio/index.html"> Portfolio </a>
+                <a href="/aboutme/index.html"> About me </a>
+            </div>
+            <p class="copyright">Copyright © 2026 Michela Folcio. All rights reserved.</p>
         </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="assets/javascript/script.js"></script>
 </body>
 </html> 
