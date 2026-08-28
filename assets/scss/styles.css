@@ -243,7 +243,7 @@ section h2 {
   background-image: url("/assets/img/sfondotext-02.png");
   background-repeat: no-repeat;
   background-position: right bottom;
-  background-size: auto 140%;
+  background-size: auto 160%;
 }
 .contatti a {
   color: white;
@@ -320,26 +320,31 @@ section h2 {
   background-color: #6a1371;
 }
 
-.social-icons {
+.footer .social-icons {
   margin: 32px 0;
   display: flex;
   gap: 0px;
 }
-.social-icons i {
+.footer .social-icons i {
   padding-right: 24px;
   color: #fff0d2;
-  width: 100%;
+  width: auto;
+  font-size: 32px;
   height: 100%;
 }
-.social-icons i:hover {
+.footer .social-icons i:hover {
   color: #ff8133;
 }
 
 /*____ PAGINA_CONTATTI____*/
 #contattimain {
-  padding: 48px 96px;
+  padding: 48px 0;
   margin-bottom: 96px;
   background-color: #ffe4b5;
+  background-image: url("/assets/img/sfondotext-03.png");
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: auto 120%;
   display: flex;
   gap: 40px;
 }
@@ -402,6 +407,12 @@ section h2 {
   color: #DE4812;
   font-size: 44px;
   transition: 0.1s;
+}
+.sezione-social .social-icons i {
+  color: #DE4812;
+}
+.sezione-social .social-icons i:hover {
+  color: #400b44;
 }
 .sezione-social a:hover {
   color: #400b44;
@@ -480,21 +491,21 @@ section h2 {
 }
 
 #graphic-design {
-  padding: 48px 0;
+  padding: 48px 96px;
 }
 #graphic-design .container {
   padding: 48px 0;
 }
 
 #branding {
-  padding: 0 0 48px 0;
+  padding: 0 96px 48px 96px;
 }
 #branding .container {
   padding: 48px 0;
 }
 
 #print-design {
-  padding: 0 0 48px 0;
+  padding: 0 96px 48px 96px;
 }
 #print-design .container {
   padding: 48px 0;
@@ -543,11 +554,34 @@ section h2 {
 #cv .cv-container h3 {
   font-weight: 600;
   font-size: 20px;
+  padding-bottom: 4px;
 }
 #cv .cv-container h4 {
   padding-bottom: 8px;
   font-weight: 400;
   font-size: 16px;
+}
+#cv #skillscv .grigliasoft {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 32px;
+  padding-top: 16px;
+}
+#cv #skillscv .grigliasoft .programma {
+  width: 10%;
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#cv #skillscv .grigliasoft .programma img {
+  width: 100%;
+  height: 80px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+#cv #skillscv .grigliasoft .programma p {
+  text-align: center;
 }
 
 .blocco {
@@ -571,12 +605,12 @@ section h2 {
   .my-photo img {
     width: 200px;
   }
-  .fotoaboutme {
+  .hero-section .fotoaboutme {
     flex: 0 0 auto;
     max-width: 100%;
   }
-  .fotoaboutme img {
-    width: 200px;
+  .hero-section .fotoaboutme img {
+    width: 220px;
   }
   /*HOME - sezione-contatti*/
   #contattimain {
@@ -591,6 +625,52 @@ section h2 {
   /*PAGINA - PORTFOLIO*/
   .portfolio-item {
     flex: 0 0 calc((100% - 40px) / 3);
+  }
+}
+@media (max-width: 900px) {
+  nav {
+    padding: 0 48px;
+  }
+  nav .mobile-menu-toggle {
+    display: block;
+    margin-left: auto;
+    border: 0;
+    padding: 8px;
+    color: #400b44;
+    background-color: transparent;
+    font-size: 22px;
+    cursor: pointer;
+  }
+  nav .nav-menu {
+    display: none;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    padding: 20px 48px;
+    background-color: #ffe9c2;
+    box-shadow: 0 8px 16px rgba(64, 11, 68, 0.12);
+  }
+  nav.menu-open .nav-menu {
+    display: flex;
+  }
+  nav .vocimenu {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  nav .vocimenu a {
+    padding: 8px 0;
+  }
+  nav .bottone-contatti a {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: 0;
   }
 }
 @media (max-width: 768px) {
@@ -637,13 +717,15 @@ section h2 {
     gap: 8px;
   }
   nav .vocimenu a {
-    padding: 8px 0;
+    padding: 8px 16px;
   }
   nav .left .navbar-brand p {
     display: none;
   }
   nav .bottone-contatti a {
-    display: inline-flex;
+    display: flex;
+    width: 100%;
+    justify-content: center;
     margin: 0;
   }
   .footer {
@@ -667,13 +749,53 @@ section h2 {
     border-left: 0;
     padding: 0;
   }
+  .footer .social-icons {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .footer .social-icons a {
+    flex: 0 0 25%;
+    text-align: center;
+  }
+  .footer .social-icons i {
+    padding-right: 0;
+  }
   /*HOME - sezione1*/
+  .hero-section {
+    background-size: 250%;
+  }
+  .hero-section h2 {
+    font-size: 24px;
+  }
+  .my-photo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .my-photo img {
+    width: min(100px, 100%);
+    max-width: 70%;
+  }
+  .hero-section .my-photo {
+    justify-content: center;
+  }
   section {
     padding: 16px 32px;
   }
   #contattimain,
   #uxuidesign {
     padding: 16px 32px;
+  }
+  #contattimain {
+    background-size: 250%;
+  }
+  #graphic-design {
+    padding: 16px 32px;
+  }
+  #branding,
+  #print-design {
+    padding: 0 32px 16px 32px;
   }
   .contatti .bottone-contatti {
     width: 100%;
@@ -697,7 +819,7 @@ section h2 {
     display: block;
   }
   h1 {
-    font-size: 24px;
+    font-size: 32px;
   }
   /*HOME - sezione skills*/
   .sezione-skills h2 {
@@ -709,15 +831,40 @@ section h2 {
   .sezione-skills .caselle .skill {
     color: #DE4812;
   }
+  #cv {
+    background-size: 250%;
+  }
+  #cv #skillscv .grigliasoft {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  #cv #skillscv .grigliasoft .programma {
+    width: calc((100% - 32px) / 3);
+  }
   /*PAGINA - CONTATTI*/
   .sezione-contatti {
-    padding: 0 32px;
+    padding: 0 0px;
   }
   .sezione-contatti h2 {
     font-size: 24px;
   }
-  /*PAGINA - PORTFOLIO*/
-  .portfolio-item {
-    flex: 0 0 calc((100% - 20px) / 2);
+  .sezione-social {
+    padding: 0 32px;
+    margin: 0 0 32px 0;
   }
+  .social-icons {
+    width: 100%;
+  }
+  .social-icons i {
+    font-size: 40px;
+    margin: 0;
+  }
+}
+/*PAGINA - PORTFOLIO*/
+#sezione-works {
+  background-size: 250%;
+}
+
+.portfolio-item {
+  flex: 0 0 calc((100% - 20px) / 1);
 }/*# sourceMappingURL=styles.css.map */
