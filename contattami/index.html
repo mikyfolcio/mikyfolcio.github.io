@@ -51,7 +51,8 @@
         </div>
      </nav>
     
-            <!--SEZIONE1: Contacts-->
+<!--SEZIONE1: Contacts-->
+
         <main id="contattimain">
 
             <section id="Contatti" class="sezione-contatti">
@@ -73,9 +74,14 @@
                             <label for="message">Messaggio</label>
                             <textarea id="message" name="message" rows="6" required></textarea>
 
-                            <button type="submit">Invia</button>
+                            <div class="privacy-checkbox">
+                                <input type="checkbox" id="privacy" name="privacy" required>
+                                <label for="privacy">
+                                    Ho letto e accetto l'<a href="../privacy/index.html">Informativa sulla privacy</a>
+                                </label>
+                            </div>
 
-                            
+                            <button type="submit" class="invia">Invia</button>
 
                         </form> 
 
@@ -129,7 +135,7 @@
                 <a href="../portfolio/index.html">Portfolio</a>
                 <a href="../aboutme/index.html">About me</a>
             </div>
-            <p class="copyright">Copyright © 2026 Michela Folcio. All rights reserved.</p>
+            <p class="copyright">Copyright © 2026 Michela Folcio. All rights reserved. - <a href="../privacy/index.html">Informativa Privacy</a></p>
         </footer>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>

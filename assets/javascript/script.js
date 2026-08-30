@@ -11,14 +11,28 @@ if (menuToggle && navigation) {
 const contactForm = document.getElementById("contatti");
 
 if (contactForm) {
-    emailjs.init({
-        publicKey: "LABXqDuBivpz5y5tK"
-    });
+    const privacyCheckbox = document.getElementById("privacy");
 
     contactForm.addEventListener("submit", function(event) {
+        if (!privacyCheckbox || !privacyCheckbox.checked) {
+            event.preventDefault();
+            alert("Per inviare il messaggio devi accettare l'informativa sulla privacy.");
+            return;
+        }
+
+        if (typeof emailjs === "undefined") {
+            console.warn("EmailJS non caricato: il form di contatto non può essere inviato.");
+            event.preventDefault();
+            return;
+        }
+
         event.preventDefault();
 
         const form = this;
+
+        emailjs.init({
+            publicKey: "LABXqDuBivpz5y5tK"
+        });
 
         emailjs.sendForm(
             "service_y691tth",

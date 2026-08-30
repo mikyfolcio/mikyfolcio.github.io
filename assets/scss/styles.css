@@ -5,8 +5,12 @@
   box-sizing: border-box;
 }
 
-h1, h2 {
+h1, h2, h3 {
   font-weight: 700;
+}
+
+h3 {
+  font-size: 20px;
 }
 
 html {
@@ -18,6 +22,10 @@ body {
   background-color: #fff0d2;
   color: #400b44;
   max-width: 1920px;
+  background-image: url("/assets/img/sfondotext-03.png");
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: 120%;
 }
 
 a {
@@ -47,11 +55,15 @@ nav .mobile-menu-toggle {
 nav .vocimenu a {
   font-weight: 600;
   padding: 8px 16px;
+  transition: 0, 8s;
 }
 nav .vocimenu a:hover {
   color: #DE4812;
   background-color: #ffdc9f;
   border-radius: 24px;
+}
+nav .vocimenu a:focus {
+  border: 2px solid #DE4812;
 }
 nav .left {
   display: flex;
@@ -77,7 +89,7 @@ nav .left a {
 }
 nav .left img {
   width: 40px;
-  margin-right: 8px;
+  margin-right: 16px;
 }
 
 nav .bottone-contatti a {
@@ -93,6 +105,9 @@ nav .bottone-contatti a:last-child:hover {
   color: #fff0d2;
   background-color: #400b44;
 }
+nav .bottone-contatti a:last-child:focus {
+  border: 4px solid #DE4812;
+}
 nav .bottone-contatti a span {
   margin-left: 4px;
 }
@@ -105,9 +120,34 @@ nav .bottone-contatti .mio-bottone {
   padding: 10px 20px;
 }
 
+.back-to-top {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 20;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  padding: 0;
+  border-radius: 999px;
+  color: #fff0d2;
+  background-color: #DE4812;
+  box-shadow: 0 8px 18px rgba(222, 72, 18, 0.25);
+  transition: 0.3s ease;
+}
+.back-to-top i {
+  font-size: 18px;
+}
+.back-to-top:hover {
+  color: #fff0d2;
+  background-color: #400b44;
+}
+
 /*___MAIN___*/
 section {
-  padding: 48px 96px;
+  padding: 0 96px;
 }
 section #sottotitolo {
   text-align: left;
@@ -118,22 +158,20 @@ section h2 {
   text-align: left;
 }
 
-/* HOME - SEZIONE 1*/
+/* HOME - SEZIONE 1 hero*/
 .hero-section {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 40px;
   margin-top: 0px;
-  background-image: url("/assets/img/sfondotext-03.png");
-  background-repeat: no-repeat;
-  background-position: right top;
-  background-size: auto 120%;
+  padding: 48px 96px;
 }
 .hero-section h1 {
   font-size: 48px;
 }
 .hero-section h2 {
+  font-size: 32px;
   align-items: center;
 }
 .hero-section .text .links {
@@ -147,12 +185,16 @@ section h2 {
   border-radius: 999px;
   margin-right: 4px;
   margin-bottom: 10px;
-  transition: 0, 5s;
+  transition: 0.8s;
   background-color: transparent;
 }
 .hero-section .text .links a:hover {
   color: #400b44;
   border: 2px solid #400b44;
+  background-color: #ffe4b5;
+}
+.hero-section .text .links a:focus {
+  border: 4px solid #400b44;
 }
 .hero-section .text {
   flex: 8;
@@ -174,19 +216,6 @@ section h2 {
 .hero-section .my-photo img {
   border-radius: 999px;
   width: 350px;
-}
-.hero-section .fotoaboutme {
-  flex: 0 0 33.333%;
-  max-width: 33.333%;
-  min-width: 0;
-  display: flex;
-  justify-content: right;
-  align-items: center;
-}
-.hero-section .fotoaboutme img {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
 }
 
 /*HOME - SEZIONE 2 skills */
@@ -227,7 +256,7 @@ section h2 {
   -o-object-fit: contain;
      object-fit: contain;
 }
-.sezione-skills .caselle .casella h3 {
+.sezione-skills .caselle .casella p {
   font-size: 16px;
   font-weight: 600;
   color: #DE4812;
@@ -239,11 +268,8 @@ section h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 24px;
-  background-image: url("/assets/img/sfondotext-02.png");
-  background-repeat: no-repeat;
-  background-position: right bottom;
-  background-size: auto 160%;
+  margin: 0;
+  padding-bottom: 48px;
 }
 .contatti a {
   color: white;
@@ -271,6 +297,9 @@ section h2 {
   color: #fff0d2;
   background-color: #6a1371;
 }
+.contatti .bottone-contatti .mio-bottone:focus {
+  border: 4px solid #DE4812;
+}
 
 /*___FOOTER___*/
 .footer {
@@ -292,9 +321,14 @@ section h2 {
 }
 .footer-right a {
   color: #fff0d2;
+  padding: 4px;
 }
 .footer-right a:hover {
   color: #ff8133;
+}
+.footer-right a:focus {
+  border: 2px solid #DE4812;
+  border-radius: 16px;
 }
 
 .copyright {
@@ -303,6 +337,14 @@ section h2 {
   font-size: 12px;
   font-weight: 100;
   text-align: right;
+}
+.copyright a {
+  color: rgba(255, 240, 210, 0.8);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.copyright a:hover {
+  color: #ff8133;
 }
 
 .footer-left .bottone-contatti-footer .mio-bottone {
@@ -318,6 +360,9 @@ section h2 {
 .footer-left .bottone-contatti-footer .mio-bottone:hover {
   color: #fff0d2;
   background-color: #6a1371;
+}
+.footer-left .bottone-contatti-footer .mio-bottone:focus {
+  border: 4px solid #DE4812;
 }
 
 .footer .social-icons {
@@ -339,12 +384,7 @@ section h2 {
 /*____ PAGINA_CONTATTI____*/
 #contattimain {
   padding: 48px 0;
-  margin-bottom: 96px;
-  background-color: #ffe4b5;
-  background-image: url("/assets/img/sfondotext-03.png");
-  background-repeat: no-repeat;
-  background-position: right top;
-  background-size: auto 120%;
+  margin-bottom: 48px;
   display: flex;
   gap: 40px;
 }
@@ -379,6 +419,30 @@ section h2 {
   outline: none;
   resize: none;
 }
+.sezione-contatti .group .privacy-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 8px 0 18px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.sezione-contatti .group .privacy-checkbox input {
+  width: 18px;
+  height: 18px;
+  margin: 3px 0 0;
+  accent-color: #DE4812;
+  flex-shrink: 0;
+}
+.sezione-contatti .group .privacy-checkbox label {
+  margin: 0;
+  color: #400b44;
+}
+.sezione-contatti .group .privacy-checkbox label a {
+  color: #DE4812;
+  text-decoration: underline;
+  font-weight: 600;
+}
 .sezione-contatti .group form button {
   font-size: 16px;
   font-family: "Poppins", sans-serif;
@@ -388,10 +452,14 @@ section h2 {
   height: 50px;
   cursor: pointer;
   border-radius: 12px;
-  transition: 0.1s;
+  transition: 0.6s;
 }
 .sezione-contatti .group form button:hover {
-  filter: brightness(0.9);
+  background-color: #400b44;
+  color: #fff0d2;
+}
+.sezione-contatti .group form button:focus {
+  border: 4px solid #DE4812;
 }
 .sezione-contatti #form-message {
   margin-top: 16px;
@@ -406,7 +474,7 @@ section h2 {
 .sezione-social a {
   color: #DE4812;
   font-size: 44px;
-  transition: 0.1s;
+  transition: 0.8s;
 }
 .sezione-social .social-icons i {
   color: #DE4812;
@@ -420,17 +488,12 @@ section h2 {
 
 /*____ PAGINA_PORTFOLIO____*/
 #sezione-works {
-  padding: 48px 0;
+  padding: 0 0;
   margin-bottom: 96px;
 }
 #sezione-works h2 {
   padding: 20px 0;
-}
-#sezione-works {
-  background-image: url("/assets/img/sfondotext-03.png");
-  background-repeat: no-repeat;
-  background-position: right top;
-  background-size: auto 15%;
+  color: #DE4812;
 }
 
 #works h1 {
@@ -530,12 +593,6 @@ section h2 {
 }
 
 /*____PAGINA_CV____*/
-#cv {
-  background-image: url("/assets/img/sfondotext-03.png");
-  background-repeat: no-repeat;
-  background-position: right top;
-  background-size: auto 39%;
-}
 #cv .cv-container {
   padding: 48px 0;
 }
@@ -544,17 +601,15 @@ section h2 {
   padding: 4px 0;
   text-align: left;
 }
-#cv .cv-container p {
-  padding: 4px 0;
-}
 #cv .cv-container p.data {
   color: #DE4812;
   font-weight: 600;
+  padding-top: 16px;
+  border-bottom: 8px solid #ffe9c2;
 }
 #cv .cv-container h3 {
   font-weight: 600;
   font-size: 20px;
-  padding-bottom: 4px;
 }
 #cv .cv-container h4 {
   padding-bottom: 8px;
@@ -565,14 +620,14 @@ section h2 {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  gap: 32px;
+  gap: 20px;
   padding-top: 16px;
 }
 #cv #skillscv .grigliasoft .programma {
   width: 10%;
   aspect-ratio: 1/1;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 #cv #skillscv .grigliasoft .programma img {
   width: 100%;
@@ -584,16 +639,46 @@ section h2 {
   text-align: center;
 }
 
+#skills h3 {
+  margin-top: 24px;
+}
+
 .blocco {
   margin: 48px 0;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #400b44;
 }
 
 /*___PAGINA - ABOUTME___*/
-.titoletto {
+.hero-section .text .titoletto {
+  font-weight: 800;
   margin-top: 48px;
 }
 
-/* MEDIA QUERIES */
+.fotoaboutme {
+  flex: 0 0 33.333%;
+  max-width: 33.333%;
+  min-width: 0;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+.fotoaboutme img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.policy {
+  display: flex;
+  flex-direction: column;
+  padding: 48px 96px;
+}
+.policy .privacy-section {
+  padding-top: 32px;
+}
+
+/* ____________MEDIA QUERIES_____________ */
 @media (max-width: 992px) {
   /*HOME - sezione1*/
   .hero-section {
@@ -601,6 +686,12 @@ section h2 {
   }
   .hero-section h1 {
     font-size: 32px;
+  }
+  .hero-section h2 {
+    font-size: 32px;
+  }
+  h3 {
+    font-size: 20px;
   }
   .my-photo img {
     width: 200px;
@@ -628,6 +719,12 @@ section h2 {
   }
 }
 @media (max-width: 900px) {
+  body {
+    background-image: url("/assets/img/sfondotext-03.png");
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 160%;
+  }
   nav {
     padding: 0 48px;
   }
@@ -674,6 +771,12 @@ section h2 {
   }
 }
 @media (max-width: 768px) {
+  body {
+    background-image: url("/assets/img/sfondotext-03.png");
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 200%;
+  }
   /*navbar*/
   nav {
     padding: 0 20px;
@@ -762,10 +865,17 @@ section h2 {
   }
   /*HOME - sezione1*/
   .hero-section {
+    padding: 16px 20px;
     background-size: 250%;
+  }
+  .hero-section h1 {
+    font-size: 32px;
   }
   .hero-section h2 {
     font-size: 24px;
+  }
+  h3 {
+    font-size: 16px;
   }
   .my-photo {
     width: 100%;
@@ -783,12 +893,15 @@ section h2 {
   section {
     padding: 16px 32px;
   }
+  .back-to-top {
+    right: 20px;
+    bottom: 20px;
+    width: 48px;
+    height: 48px;
+  }
   #contattimain,
   #uxuidesign {
     padding: 16px 32px;
-  }
-  #contattimain {
-    background-size: 250%;
   }
   #graphic-design {
     padding: 16px 32px;
@@ -821,7 +934,18 @@ section h2 {
   h1 {
     font-size: 32px;
   }
-  /*HOME - sezione skills*/
+  h2,
+  section h2,
+  .hero-section h2,
+  .hero-section .text h2,
+  .sezione-skills h2,
+  #contattimain h2,
+  .sezione-contatti h2,
+  .sezione-social h2,
+  #sezione-works h2,
+  #cv .cv-container h2 {
+    font-size: 24px;
+  }
   .sezione-skills h2 {
     font-size: 24px;
   }
@@ -831,14 +955,14 @@ section h2 {
   .sezione-skills .caselle .skill {
     color: #DE4812;
   }
-  #cv {
-    background-size: 250%;
-  }
-  #cv #skillscv .grigliasoft {
+  #skillscv .grigliasoft {
     flex-wrap: wrap;
     gap: 16px;
   }
-  #cv #skillscv .grigliasoft .programma {
+  #skillscv .grigliasoft p {
+    display: none;
+  }
+  #skillscv .grigliasoft .programma {
     width: calc((100% - 32px) / 3);
   }
   /*PAGINA - CONTATTI*/
@@ -859,12 +983,16 @@ section h2 {
     font-size: 40px;
     margin: 0;
   }
+  /*PAGINA - PORTFOLIO*/
+  .portfolio-item {
+    flex: 0 0 calc((100% - 40px) / 2);
+  }
 }
-/*PAGINA - PORTFOLIO*/
-#sezione-works {
-  background-size: 250%;
-}
-
-.portfolio-item {
-  flex: 0 0 calc((100% - 20px) / 1);
+@media (max-width: 576px) {
+  body {
+    background-image: url("/assets/img/sfondotext-03.png");
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 250%;
+  }
 }/*# sourceMappingURL=styles.css.map */
