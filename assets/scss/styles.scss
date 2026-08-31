@@ -265,8 +265,11 @@ section {
 
 /*HOME - SEZIONE 2 skills */
 
-.sezione-skills {
+#skills.sezione-skills {
     margin-bottom: 48px;
+}
+
+.sezione-skills {
     padding: 64px 96px;
     background-color: $background2-color;
 
@@ -322,6 +325,12 @@ section {
         align-items: center;
         margin:0;
         padding-bottom: 48px;
+        padding-top:56px;
+
+        background-image: url(/assets/img/sfondotext-02.svg);
+        background-position: right bottom;
+        background-repeat: none;
+        background-size: 100%;
 
         a {
             color: white;
@@ -707,7 +716,8 @@ section {
             color:$cta-color;
             font-weight: 600;
             padding-top:16px;
-            border-bottom: 8px solid $background3-color;
+            border-bottom: 4px solid $cta-color;
+            display: inline-block;
         }
         h3{
             font-weight: 600;
@@ -838,6 +848,16 @@ section {
 
     .sezione-contatti .group {
         flex-direction: column;
+    }
+
+    .sezione-social {
+        width: 100%;
+        margin: 32px 0 0;
+        text-align: left;
+
+        .social-icons {
+            justify-content: flex-start;
+        }
     }
 
     /*PAGINA - PORTFOLIO*/
@@ -1084,13 +1104,21 @@ section {
         padding: 0 32px 16px 32px;
     }
 
-    .contatti .bottone-contatti {
+    .contatti {
+        background-size: 200%;
+    
+        .bottone-contatti {
         width: 100%;
         margin: 16px 0;
 
         .mio-bottone {
             width: 100%;
         }
+        }
+    }
+
+    #skills .sezione-skills {
+        margin-bottom: 48px;
     }
 
     .sezione-skills {
@@ -1160,19 +1188,23 @@ h1 {
             font-size: 24px;
             }
     }
-    .sezione-social{
+    .sezione-social {
         padding: 0 32px;
-        margin: 0 0 32px 0;;
-
-    }
+        margin: 0 0 32px 0;
+        text-align: left;
 
         .social-icons {
-            width:100%;
-            i {
-                font-size: 40px;
-                margin:0;
-            }
+            justify-content: flex-start;
         }
+    }
+
+    .social-icons {
+        width:100%;
+        i {
+            font-size: 40px;
+            margin:0;
+        }
+    }
 
     /*PAGINA - PORTFOLIO*/
 
