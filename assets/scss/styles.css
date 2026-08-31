@@ -22,7 +22,7 @@ body {
   background-color: #fff0d2;
   color: #400b44;
   max-width: 1920px;
-  background-image: url("/assets/img/sfondotext-03.png");
+  background-image: url("../img/sfondotext-03.png");
   background-repeat: no-repeat;
   background-position: top right;
   background-size: 120%;
@@ -274,7 +274,7 @@ section h2 {
   margin: 0;
   padding-bottom: 48px;
   padding-top: 56px;
-  background-image: url(/assets/img/sfondotext-02.svg);
+  background-image: url("../img/sfondotext-02.svg");
   background-position: right bottom;
   background-repeat: none;
   background-size: 100%;
@@ -737,7 +737,7 @@ section h2 {
 }
 @media (max-width: 900px) {
   body {
-    background-image: url("/assets/img/sfondotext-03.png");
+    background-image: url("../img/sfondotext-03.png");
     background-repeat: no-repeat;
     background-position: top right;
     background-size: 160%;
@@ -789,7 +789,7 @@ section h2 {
 }
 @media (max-width: 768px) {
   body {
-    background-image: url("/assets/img/sfondotext-03.png");
+    background-image: url("../img/sfondotext-03.png");
     background-repeat: no-repeat;
     background-position: top right;
     background-size: 200%;
@@ -1017,7 +1017,7 @@ section h2 {
 }
 @media (max-width: 576px) {
   body {
-    background-image: url("/assets/img/sfondotext-03.png");
+    background-image: url("../img/sfondotext-03.png");
     background-repeat: no-repeat;
     background-position: top right;
     background-size: 250%;
